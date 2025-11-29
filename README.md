@@ -23,9 +23,6 @@
 - [NPM Scripts](#-npm-scripts)
 - [Configuration](#️-configuration)
 - [Usage](#-usage)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
 
 ---
 
@@ -33,14 +30,14 @@
 
 Proyek "Task Reminder App" dirancang untuk menyediakan pengalaman yang mulus dan intuitif dalam mengelola tugas Anda. Berikut adalah beberapa fitur utama yang dapat Anda harapkan:
 
-*   **Manajemen Tugas Intuitif:** Buat, lihat, edit, dan hapus tugas dengan mudah melalui antarmuka yang bersih dan berpusat pada pengguna, memungkinkan Anda untuk tetap terorganisir.
-*   **Penjadwalan dan Tampilan Kalender:** Manfaatkan kalender interaktif (`Calendar.tsx` dan `react-day-picker`) untuk menjadwalkan tugas, melihat tenggat waktu, dan mendapatkan gambaran visual tentang jadwal Anda.
-*   **Sistem Desain Modular & UI yang Elegan:** Dibangun dengan filosofi sistem desain yang kuat menggunakan komponen Radix UI dan Shadcn UI (`src/components/ui/`), memastikan konsistensi visual, aksesibilitas, dan pengalaman pengguna yang luar biasa.
-*   **Pengaturan Profil & Personalisasi:** Sesuaikan pengalaman aplikasi Anda dengan pengaturan profil dan persona (`Profile.tsx`, `Persona.tsx`), memungkinkan penyesuaian yang disesuaikan dengan preferensi Anda.
-*   **Pengalaman Orientasi Pengguna:** Panduan orientasi yang dirancang dengan baik (`Onboarding.tsx`) untuk membantu pengguna baru memulai dan memahami fungsionalitas aplikasi dengan cepat.
-*   **Dukungan Tema Gelap & Terang:** Beralih dengan mulus antara tema gelap dan terang (`next-themes`) untuk kenyamanan visual yang optimal di berbagai lingkungan.
-*   **Visualisasi Data Interaktif:** Dasbor (`Dashboard.tsx`) dapat menampilkan visualisasi data tugas, seperti kemajuan atau ringkasan tugas, menggunakan grafik canggih dari Recharts.
-*   **Navigasi Aplikasi Intuitif:** Dengan `react-router`, aplikasi menyediakan navigasi yang lancar dan pengalaman pengguna yang responsif antar bagian.
+- **Manajemen Tugas Intuitif:** Buat, lihat, edit, dan hapus tugas dengan mudah melalui antarmuka yang bersih dan berpusat pada pengguna, memungkinkan Anda untuk tetap terorganisir.
+- **Penjadwalan dan Tampilan Kalender:** Manfaatkan kalender interaktif (`Calendar.tsx` dan `react-day-picker`) untuk menjadwalkan tugas, melihat tenggat waktu, dan mendapatkan gambaran visual tentang jadwal Anda.
+- **Sistem Desain Modular & UI yang Elegan:** Dibangun dengan filosofi sistem desain yang kuat menggunakan komponen Radix UI dan Shadcn UI (`src/components/ui/`), memastikan konsistensi visual, aksesibilitas, dan pengalaman pengguna yang luar biasa.
+- **Pengaturan Profil & Personalisasi:** Sesuaikan pengalaman aplikasi Anda dengan pengaturan profil dan persona (`Profile.tsx`, `Persona.tsx`), memungkinkan penyesuaian yang disesuaikan dengan preferensi Anda.
+- **Pengalaman Orientasi Pengguna:** Panduan orientasi yang dirancang dengan baik (`Onboarding.tsx`) untuk membantu pengguna baru memulai dan memahami fungsionalitas aplikasi dengan cepat.
+- **Dukungan Tema Gelap & Terang:** Beralih dengan mulus antara tema gelap dan terang (`next-themes`) untuk kenyamanan visual yang optimal di berbagai lingkungan.
+- **Visualisasi Data Interaktif:** Dasbor (`Dashboard.tsx`) dapat menampilkan visualisasi data tugas, seperti kemajuan atau ringkasan tugas, menggunakan grafik canggih dari Recharts.
+- **Navigasi Aplikasi Intuitif:** Dengan `react-router`, aplikasi menyediakan navigasi yang lancar dan pengalaman pengguna yang responsif antar bagian.
 
 ---
 
@@ -48,20 +45,20 @@ Proyek "Task Reminder App" dirancang untuk menyediakan pengalaman yang mulus dan
 
 Aplikasi ini dibangun menggunakan tumpukan teknologi modern untuk memastikan kinerja, skalabilitas, dan pengalaman pengembang yang hebat.
 
-| Kategori            | Teknologi             | Catatan                                                                 |
-|---------------------|-----------------------|-------------------------------------------------------------------------|
-| Frontend Frameworks | React                  | Untuk membangun antarmuka pengguna interaktif.                          |
-| Language            | TypeScript             | Untuk type safety dan pengalaman pengembangan yang lebih baik.         |
-| Build Tool          | Vite                   | Build tool yang sangat cepat dengan Hot Module Replacement (HMR).      |
-| Styling             | Tailwind CSS           | Utility-first CSS framework untuk styling yang cepat dan konsisten.    |
-| UI Components       | Radix UI               | Komponen primitif yang dapat diakses dan tidak bergaya.                |
-| UI Library          | Shadcn UI              | Komponen UI yang dapat disesuaikan dibangun di atas Radix UI.          |
-| Routing             | React Router           | Untuk navigasi dan routing di aplikasi.                                |
-| Date Picker         | react-day-picker       | Komponen kalender dan date picker yang fleksibel.                      |
-| Charts              | Recharts               | Library charting yang dibangun dengan React untuk visualisasi data.    |
-| Theming             | next-themes            | Untuk mengelola tema gelap dan terang.                                 |
-| Icons               | Lucide React           | Ikon yang indah dan konsisten.                                         |
-| Package Manager     | npm                    | Untuk mengelola dependensi proyek.                                     |
+| Kategori            | Teknologi        | Catatan                                                             |
+| ------------------- | ---------------- | ------------------------------------------------------------------- |
+| Frontend Frameworks | React            | Untuk membangun antarmuka pengguna interaktif.                      |
+| Language            | TypeScript       | Untuk type safety dan pengalaman pengembangan yang lebih baik.      |
+| Build Tool          | Vite             | Build tool yang sangat cepat dengan Hot Module Replacement (HMR).   |
+| Styling             | Tailwind CSS     | Utility-first CSS framework untuk styling yang cepat dan konsisten. |
+| UI Components       | Radix UI         | Komponen primitif yang dapat diakses dan tidak bergaya.             |
+| UI Library          | Shadcn UI        | Komponen UI yang dapat disesuaikan dibangun di atas Radix UI.       |
+| Routing             | React Router     | Untuk navigasi dan routing di aplikasi.                             |
+| Date Picker         | react-day-picker | Komponen kalender dan date picker yang fleksibel.                   |
+| Charts              | Recharts         | Library charting yang dibangun dengan React untuk visualisasi data. |
+| Theming             | next-themes      | Untuk mengelola tema gelap dan terang.                              |
+| Icons               | Lucide React     | Ikon yang indah dan konsisten.                                      |
+| Package Manager     | npm              | Untuk mengelola dependensi proyek.                                  |
 
 ---
 
@@ -183,12 +180,12 @@ task-reminder-app/
 
 Berikut adalah skrip yang tersedia dalam `package.json`:
 
-| Skrip           | Deskripsi                                                      |
-|-----------------|----------------------------------------------------------------|
-| `npm run dev`   | Menjalankan aplikasi dalam mode pengembangan                  |
-| `npm run build` | Membuat build produksi yang dioptimalkan                       |
-| `npm run preview` | Preview build produksi secara lokal                          |
-| `npm run lint`  | Menjalankan ESLint untuk memeriksa kualitas kode              |
+| Skrip             | Deskripsi                                        |
+| ----------------- | ------------------------------------------------ |
+| `npm run dev`     | Menjalankan aplikasi dalam mode pengembangan     |
+| `npm run build`   | Membuat build produksi yang dioptimalkan         |
+| `npm run preview` | Preview build produksi secara lokal              |
+| `npm run lint`    | Menjalankan ESLint untuk memeriksa kualitas kode |
 
 ---
 
@@ -197,6 +194,7 @@ Berikut adalah skrip yang tersedia dalam `package.json`:
 ### Tailwind CSS
 
 Konfigurasi Tailwind CSS dapat dimodifikasi di `tailwind.config.js`. Anda dapat menambahkan:
+
 - Warna custom
 - Font custom
 - Breakpoints
@@ -205,6 +203,7 @@ Konfigurasi Tailwind CSS dapat dimodifikasi di `tailwind.config.js`. Anda dapat 
 ### TypeScript
 
 Konfigurasi TypeScript tersedia di `tsconfig.json`. Anda dapat menyesuaikan:
+
 - Target kompilasi
 - Path aliases
 - Strict mode options
@@ -212,6 +211,7 @@ Konfigurasi TypeScript tersedia di `tsconfig.json`. Anda dapat menyesuaikan:
 ### Vite
 
 Konfigurasi Vite dapat disesuaikan di `vite.config.ts` untuk:
+
 - Plugin tambahan
 - Proxy development
 - Build optimization
