@@ -1,0 +1,86 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+/.nyc_output
+/test-results.json
+/test-results.xml
+
+# Production and Distribution
+/build
+/dist
+/out
+/package
+
+# TypeScript/JavaScript
+# Compiled TypeScript files (usually handled by 'build' or 'dist' folders,
+# but can be added if outputting to the root)
+# *.js
+# *.d.ts
+
+# Source maps
+*.js.map
+*.ts.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.log
+.cache
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.local
+
+# Config files
+# The following are often specific to individual developers and should usually be ignored.
+# However, if you are sharing common configuration, you might want to uncomment some.
+*.local
+.env
+.env.*
+.temp
+.session
+
+# Package Manager lock files and cache
+package-lock.json
+# Uncomment the following if you use yarn but *don't* want to commit yarn.lock
+# yarn.lock
+# pnpm-lock.yaml
+# pnpm-store/
+
+# Next.js specific (if using Next.js)
+.next/
+# Uncomment if you are using a custom next cache directory
+# .next-cache/
+
+# Gatsby specific (if using Gatsby)
+.cache/
+public/
+
+# Jest/Cypress/Testing specific
+.jest/cache
+cypress/videos
+cypress/screenshots
+*.snap
+
+# Storybook specific
+storybook-static/
+
+# IDE specific (e.g., WebStorm)
+.idea
+
+# Miscellaneous
+# Backup files
+*~
+# Temporary files
+\#*#
