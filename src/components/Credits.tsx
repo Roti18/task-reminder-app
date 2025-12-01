@@ -27,7 +27,7 @@ const team = [
       nim: "240411100056",
     },
     {
-      name: "Muhammad Zidan Dhikrulloh Perdana",
+      name: "M Zidan Dhikrulloh P",
       icon: Sparkles,
       color: "from-orange-400 to-orange-600",
       nim: "240411100083",
@@ -277,7 +277,7 @@ const team = [
           transition={{ delay: 1 }}
           className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-8"
         >
-          <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="max-w-6xl mx-auto flex justify-center items-center gap-6">
             {team.map((member, index) => {
               const Icon = member.icon;
               return (
