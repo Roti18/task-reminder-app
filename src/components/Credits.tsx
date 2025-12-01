@@ -1,54 +1,42 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { Palette, Users, FileText, Image, Code, Sparkles, ArrowLeft } from "lucide-react";
+import { Palette, Users, FileText, Image, Code, Sparkles, ArrowLeft, BookOpen, PenTool } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export function Credits() {
   const [currentScene, setCurrentScene] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  const team = [
+const team = [
     {
-      name: "Alya Putri Santoso",
-      role: "UI Designer",
-      icon: Palette,
-      color: "from-pink-400 to-pink-600",
-      description: "Merancang interface visual aplikasi",
-    },
-    {
-      name: "Budi Setiawan",
-      role: "UX Researcher",
-      icon: Users,
+      name: "Raihan Aryanova Narendra",
+      icon: Code,
       color: "from-blue-400 to-blue-600",
-      description: "Riset kebutuhan pengguna dan persona",
+      nim: "240411100094",
     },
     {
-      name: "Citra Maharani",
-      role: "Interaction Designer",
+      name: "Azka Syaikhu",
       icon: Sparkles,
       color: "from-purple-400 to-purple-600",
-      description: "Merancang flow dan interaksi pengguna",
+      nim: "240411100028",
     },
     {
-      name: "Dimas Pratama",
-      role: "Documentation Writer",
-      icon: FileText,
-      color: "from-green-400 to-green-600",
-      description: "Menulis dokumentasi design system",
-    },
-    {
-      name: "Elsa Wijaya",
-      role: "Asset Creator",
-      icon: Image,
+      name: "Ravi Dian Fahrezi",
+      icon: Sparkles,
       color: "from-orange-400 to-orange-600",
-      description: "Membuat ilustrasi dan aset visual",
+      nim: "240411100056",
     },
     {
-      name: "Fajar Rahman",
-      role: "Prototype Developer",
+      name: "Muhammad Zidan Dhikrulloh Perdana",
+      icon: Sparkles,
+      color: "from-orange-400 to-orange-600",
+      nim: "240411100083",
+    },
+    {
+      name: "Moch. Zamroni Fahreza",
       icon: Code,
-      color: "from-indigo-400 to-indigo-600",
-      description: "Mengembangkan prototype interaktif",
+      color: "from-orange-400 to-orange-600",
+      nim: "240411100085",
     },
   ];
 
@@ -60,8 +48,7 @@ export function Credits() {
     },
     ...team.map((member) => ({
       title: member.name,
-      subtitle: member.role,
-      description: member.description,
+      nim: member.nim,
       icon: member.icon,
       color: member.color,
       type: "credit",
@@ -101,7 +88,6 @@ export function Credits() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -110,8 +96,8 @@ export function Credits() {
             animate={{
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
             }}
             transition={{
               duration: 3,
@@ -123,7 +109,6 @@ export function Credits() {
         ))}
       </div>
 
-      {/* Back Button */}
       <Link
         to="/"
         className="absolute top-6 left-6 flex items-center gap-2 text-white/70 hover:text-white transition-colors z-20"
@@ -132,7 +117,6 @@ export function Credits() {
         <span className="text-sm">Kembali</span>
       </Link>
 
-      {/* Main Content */}
       <div className="w-full max-w-4xl relative z-10">
         <AnimatePresence mode="wait">
           {currentSceneData.type === "intro" && (
@@ -193,8 +177,7 @@ export function Credits() {
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
               >
                 <h2 className="text-4xl text-white mb-2">{currentSceneData.title}</h2>
-                <p className="text-xl text-blue-300 mb-4">{currentSceneData.subtitle}</p>
-                <p className="text-sm text-gray-300">{currentSceneData.description}</p>
+                <p className="text-xl text-blue-300 mb-4">NIM: {currentSceneData.nim}</p>
               </motion.div>
             </motion.div>
           )}
@@ -254,7 +237,6 @@ export function Credits() {
           )}
         </AnimatePresence>
 
-        {/* Progress Indicators */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -274,7 +256,6 @@ export function Credits() {
           ))}
         </motion.div>
 
-        {/* Controls */}
         {isPlaying && currentScene < scenes.length - 1 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -289,7 +270,6 @@ export function Credits() {
         )}
       </div>
 
-      {/* Full Team List (Bottom) */}
       {!isPlaying && currentScene === scenes.length - 1 && (
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -297,7 +277,7 @@ export function Credits() {
           transition={{ delay: 1 }}
           className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-8"
         >
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             {team.map((member, index) => {
               const Icon = member.icon;
               return (
@@ -311,8 +291,8 @@ export function Credits() {
                   <div className={`w-16 h-16 mx-auto mb-2 bg-gradient-to-br ${member.color} rounded-full flex items-center justify-center`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-xs text-white mb-1">{member.name}</p>
-                  <p className="text-xs text-gray-400">{member.role}</p>
+                  <p className="text-sm text-white font-medium mb-1">{member.name}</p>
+                  <p className="text-xs text-gray-400">{member.nim}</p>
                 </motion.div>
               );
             })}
