@@ -1,7 +1,18 @@
 import { Outlet, Link, useLocation } from "react-router";
-import { Home, CheckSquare, Calendar, User, FileText, Users, Layout as LayoutIcon, Award } from "lucide-react";
+import {
+  Home,
+  CheckSquare,
+  Calendar,
+  User,
+  FileText,
+  Users,
+  Layout as LayoutIcon,
+  Award,
+} from "lucide-react";
+import {useState} from "react";
 
 export function Layout() {
+  const [open, setOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
@@ -20,6 +31,7 @@ export function Layout() {
   ];
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Top Navigation */}
       <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
@@ -56,20 +68,28 @@ export function Layout() {
 
             {/* Utility Links Dropdown */}
             <div className="relative group">
-              <button className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all text-sm">
+              <button
+                onClick={() => setOpen(!open)}
+                className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all text-sm"
+              >
                 Dokumentasi
               </button>
-              <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div
+                className={`absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200 transition-all
+                          ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                 {utilityLinks.map((item) => {
                   const Icon = item.icon;
                   return (
                     <Link
                       key={item.path}
                       to={item.path}
+                      onClick={() => setOpen(false)} // biar ketutup setelah klik
                       className="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 first:rounded-t-xl last:rounded-b-xl transition-all"
                     >
                       <Icon className="w-4 h-4 text-blue-600" />
-                      <span className="text-sm text-gray-700">{item.label}</span>
+                      <span className="text-sm text-gray-700">
+                        {item.label}
+                      </span>
                     </Link>
                   );
                 })}
