@@ -127,15 +127,15 @@ export function Calendar() {
       >
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl text-gray-900">Kalender Belajar</h1>
-          <div className="flex items-center ">
+          <div className="flex items-center gap-2">
             <button
               onClick={previousMonth}
-              className=" rounded-lg hover:bg-gray-100 transition-all"
+              className="p-2 rounded-lg hover:bg-gray-100 transition-all"
               aria-label="Bulan sebelumnya"
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
-            <span className="min-w-[180px] text-center text-gray-900">{monthName}</span>
+            <span className="min-w-[160px] text-center text-gray-900">{monthName}</span>
             <button
               onClick={nextMonth}
               className="p-2 rounded-lg hover:bg-gray-100 transition-all"
