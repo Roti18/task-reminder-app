@@ -10,33 +10,43 @@ export function Credits() {
 const team = [
     {
       name: "Raihan Aryanova Narendra",
-      icon: Code,
+      icon: Users,
       color: "from-blue-400 to-blue-600",
       nim: "240411100094",
+      role: "Project Manager",
+      task: "Managing the project",
     },
     {
       name: "Azka Syaikhu",
-      icon: Sparkles,
+      icon: PenTool,
       color: "from-purple-400 to-purple-600",
       nim: "240411100028",
+      role: "UI/UX Design",
+      task: "Designing the user interface",
     },
     {
       name: "Ravi Dian Fahrezi",
-      icon: Sparkles,
+      icon: Code,
       color: "from-orange-400 to-orange-600",
       nim: "240411100056",
+      role: "Lead Developer",
+      task: "Leading the development",
     },
     {
       name: "M Zidan Dhikrulloh P",
-      icon: Sparkles,
+      icon: Code,
       color: "from-orange-400 to-orange-600",
       nim: "240411100083",
+      role: "Front-end Architecture",
+      task: "Building the front-end",
     },
     {
       name: "Moch. Zamroni Fahreza",
-      icon: Code,
+      icon: FileText,
       color: "from-orange-400 to-orange-600",
       nim: "240411100085",
+      role: "System Quality Assurance",
+      task: "Ensuring the quality of the system",
     },
   ];
 
@@ -49,6 +59,7 @@ const team = [
     ...team.map((member) => ({
       title: member.name,
       nim: member.nim,
+      role: member.role,
       icon: member.icon,
       color: member.color,
       type: "credit",
@@ -177,6 +188,7 @@ const team = [
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
               >
                 <h2 className="text-4xl text-white mb-2">{currentSceneData.title}</h2>
+                <p className="text-2xl text-gray-300 mb-2">{currentSceneData.role}</p>
                 <p className="text-xl text-blue-300 mb-4">NIM: {currentSceneData.nim}</p>
               </motion.div>
             </motion.div>
@@ -292,6 +304,8 @@ const team = [
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-sm text-white font-medium mb-1">{member.name}</p>
+                  <p className="text-xs text-gray-400">{member.role}</p>
+                  <p className="text-xs text-gray-400">{member.task}</p>
                   <p className="text-xs text-gray-400">{member.nim}</p>
                 </motion.div>
               );
